@@ -1,0 +1,81 @@
+{
+  "name": "vaken-ui",
+  "version": "0.0.1",
+  "description": "Next-gen hacker registration system",
+  "main": "index.js",
+  "browserslist": [
+    "> 1% in US",
+    "last 2 versions",
+    "not dead",
+    "not IE > 10",
+    "firefox ESR"
+  ],
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "format": "prettier --parser typescript --single-quote --trailing-comma=es5 --write \"./**/*.ts(,x)\"",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "lint-fix": "tslint -c tslint.json -p tsconfig.json --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run typecheck && npm run lint && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "npm run format",
+      "git add ."
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VandyHacks/vaken-ui.git"
+  },
+  "keywords": [
+    "hackathon",
+    "react",
+    "ts",
+    "immer",
+    "registration"
+  ],
+  "author": "VandyHacks Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VandyHacks/vaken-ui/issues"
+  },
+  "homepage": "https://github.com/VandyHacks/vaken-ui#readme",
+  "dependencies": {
+    "immer": "^1.9.3",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/react": "^16.7.17",
+    "@types/react-dom": "^16.0.11",
+    "babel-loader": "^8.0.4",
+    "husky": "^1.3.0",
+    "prettier": "^1.15.3",
+    "tslint": "^5.12.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
