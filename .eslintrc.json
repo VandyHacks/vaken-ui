@@ -1,0 +1,24 @@
+{
+	"extends": [
+		"airbnb",
+		"typescript",
+		"typescript/react",
+		"typescript/prettier"
+	],
+	"settings": {
+		"import/resolver": {
+			"webpack": {
+				"config": "webpack.dev.js"
+			}
+		}
+	},
+	"rules": {
+		"react/jsx-filename-extension": [
+			2,
+			{
+				"extensions": [".tsx", ".jsx"]
+			}
+		],
+		"sort-keys": ["error", "asc", { "caseSensitive": true, "natural": true }]
+	}
+}
