@@ -22,16 +22,12 @@ module.exports = {
 					{
 						loader: 'thread-loader',
 						options: {
-							workers: require('os').cpus().length - 1, // Leave 1 worker for fork-ts-checker
 							poolTimeout: Infinity, // set this to Infinity in watch mode - see https://github.com/webpack-contrib/thread-loader
+							workers: require('os').cpus().length - 1, // Leave 1 worker for fork-ts-checker
 						},
 					},
 					{
 						loader: 'babel-loader',
-						/* loader: 'ts-loader', // Alternative
-                    options: {
-                        happyPackMode: true // use happyPackMode mode to speed-up compilation and reduce errors reported to webpack
-                    } */
 					},
 				],
 			},
