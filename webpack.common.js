@@ -1,6 +1,6 @@
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin'); // To run type-checking asynchronously
-const HtmlWebpackPlugin = require('html-webpack-plugin'); // For html template file
-const path = require('path'); // For output dir
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
     context: __dirname, // to automagically find tsconfig.json
