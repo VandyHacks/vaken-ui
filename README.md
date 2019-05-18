@@ -1,4 +1,7 @@
 # vaken-ui
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/VandyHacks/vaken-ui.svg)](https://greenkeeper.io/)
+
 React GUI component of the vaken next-gen hacker registration system
 
 ## Dev
